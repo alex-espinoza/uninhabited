@@ -4,16 +4,34 @@
 }
 
 html {
-	background-color: #111111;
+	background-color: #000;
 }
 
 .main-container {
-	padding: 300px;
-	background-color: #111111;
+	background-color: #000;
+}
+
+.container .four.columns.clock {
+	height: 72px;
+	width: 220px;
+}
+
+.container .eight.columns {
+	height: 50px;
+	width: 460px;
+}
+
+.row-clock {
+	height: 72px;
+	margin-bottom: 20px;
+}
+
+.row-space {
+	height: 50px;
+	margin-bottom: 20px;
 }
 
 .digital-clock {
-	width: 300px;
 	color: red;
 	font-size: 72px;
 	font-family: 'Digital', sans-serif;
