@@ -7,12 +7,14 @@ html {
 	background-color: #000;
 }
 
-.main-container {
+.container {
 	background-color: #000;
+	color: #cdcdcd;
+	font-size: 38px;
 }
 
 .container .four.columns.clock {
-	height: 72px;
+	height: 86px;
 	width: 220px;
 }
 
@@ -22,7 +24,7 @@ html {
 }
 
 .row-clock {
-	height: 72px;
+	height: 86px;
 	margin-bottom: 20px;
 }
 
@@ -31,9 +33,17 @@ html {
 	margin-bottom: 20px;
 }
 
+.container .sixteen.columns.narrator {
+	text-align: center;
+}
+
+.narrator-text {
+	text-align: center;
+}
+
 .digital-clock {
 	color: red;
-	font-size: 72px;
+	font-size: 86px;
 	font-family: 'Digital', sans-serif;
 	text-align: center;
 	-webkit-transform: skewY(15deg);
