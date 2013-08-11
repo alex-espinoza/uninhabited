@@ -10,7 +10,6 @@ html {
 .container {
 	background-color: #000;
 	color: #cdcdcd;
-	font-size: 38px;
 }
 
 .container .four.columns.clock {
@@ -33,12 +32,45 @@ html {
 	margin-bottom: 20px;
 }
 
-.container .sixteen.columns.narrator {
+.narrator-container {
 	text-align: center;
 }
 
+.person1-container {
+	text-align: right;
+}
+
+.person2-container {
+	text-align: left;
+}
+
 .narrator-text {
+	font-family: Didot, Georgia, "Times New Roman", serif;
 	text-align: center;
+	font-size: 38px;
+}
+
+.person1-text {
+	font-family: "Lucida Grande", Verdana, sans-serif;
+	text-align: right;
+	font-size: 22px;
+	padding-right: 130px;
+}
+
+.person2-text {
+	font-family: Arial, Verdana, sans-serif;
+	text-align: left;
+	font-size: 22px;
+	padding-left: 55px;
+}
+
+.person2inner-text {
+	font-family: Arial, Verdana, sans-serif;
+	text-align: left;
+	font-style: italic;
+	font-size: 22px;
+	color: #999;
+	padding-left: 175px;
 }
 
 .digital-clock {
