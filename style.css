@@ -53,24 +53,25 @@ html {
 .person1-text {
 	font-family: "Lucida Grande", Verdana, sans-serif;
 	text-align: right;
-	font-size: 22px;
-	padding-right: 130px;
+	font-style: italic;
+	font-size: 28px;
+	padding-right: 175px;
 }
 
 .person2-text {
 	font-family: Arial, Verdana, sans-serif;
 	text-align: left;
-	font-size: 22px;
-	padding-left: 55px;
+	font-size: 28px;
+	padding-left: 85px;
 }
 
 .person2inner-text {
 	font-family: Arial, Verdana, sans-serif;
 	text-align: left;
 	font-style: italic;
-	font-size: 22px;
+	font-size: 28px;
 	color: #999;
-	padding-left: 175px;
+	padding-left: 215px;
 }
 
 .digital-clock {

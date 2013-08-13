@@ -32,7 +32,7 @@ $(function() {
 		return this;
 	};
 
-	function startIntro() {
+	function startIntroduction1() {
 		var narTxt = $(".narrator-text");
 		var p1Txt = $(".person1-text");
 		var p2Txt = $(".person2-text");
@@ -49,11 +49,52 @@ $(function() {
 		.showDialogueStall(1200, 2800, 1200, 6000).prepareDialogue(1200, "You never really had it in the first place.").delay(900)
 		.showDialogue(1200, 5000).prepareDialogue(1200, "Time had you.").delay(900)
 		.showDialogue(1200, 6000).fadeOut(3600, function() {
-			p1Txt.html("hey, are you awake?");
-		}).delay(5000);
+			startIntroduction2();
+		});
+	}
+
+	function startIntroduction2() {
+		var p1Text = $(".person1-text");
+		var p2Text = $(".person2-text");
+		var p2InnerText = $(".person2inner-text");
+		var holders = $('#text-holder');
+		p1Text.hide();
+		p2Text.hide();
+		p2InnerText.hide();
+
+		dialogueExchange1();
+
+		function dialogueExchange1() {
+			p1Text.text("hey");
+			p1Text.delay(1000).showDialogue(800, 3000).prepareDialogue(800, "hey, are you awake?");
+
+			holders.promise().done(function() {
+				dialogueExchange2();
+			});
+		}
+
+		function dialogueExchange2() {
+			p1Text.delay(900).showDialogue(800, 4000).prepareDialogue(800, "wake up").delay(900);
+
+			p2InnerText.text("...");
+			p2InnerText.delay(1200).showDialogue(800, 1500).fadeOut(800);
+		}
+
+		// p1Text.text("hey");
+		// p1Text.delay(1000).showDialogue(800, 3000) // 4800
+		// .prepareDialogue(800, "hey, are you awake?").delay(900) // 6500
+		// .showDialogue(800, 4000).prepareDialogue(800, "wake up").delay(900) // 12000
+		// .showDialogue(800, 3000).prepareDialogue(800, "don't leave me alone like this").delay(900)
+		// .showDialogue(800, 4000).fadeOut(800);
+
+		// p2Text.text("...");
+		// // p2Text.delay(8300).showDialogue(800, 1500).fadeOut(800);
+
+		// p2InnerText.text("...");
+		// p2InnerText.delay(9000).showDialogue(800, 1500).fadeOut(800);
 	}
 
 	$('.digital-clock').click(function() {
-		startIntro();
+		startIntroduction1();
 	});
 });
