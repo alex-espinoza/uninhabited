@@ -44,10 +44,36 @@ html {
 	text-align: left;
 }
 
+.choice-container {
+	text-align: center;
+}
+
 .narrator-text {
 	font-family: Didot, Georgia, "Times New Roman", serif;
 	text-align: center;
 	font-size: 38px;
+}
+
+.choice-text {
+	font-family: Didot, Georgia, "Times New Roman", serif;
+	text-align: center;
+	font-size: 28px;
+	margin: 0 20px;
+}
+
+.choice-text a {
+	color: inherit;
+	text-decoration: none;
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+
+.choice-text a:hover {
+	text-shadow: 0 0 25px white, 0 0 100px white, 0 0 150px white, 0 0 200px white, 0 0 250px white;
+	color: #dfdfdf;
+	font-size: 30px;
 }
 
 .person1-text {
