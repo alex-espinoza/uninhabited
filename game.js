@@ -46,9 +46,9 @@ $(function() {
 		narTxt.showDialogue(1200, 3000).prepareDialogue(1200, "It's funny how it works out.").delay(900)
 		.showDialogue(1200, 4000).prepareDialogue(1200, "You always think you have so much of it.").delay(900)
 		.showDialogue(1200, 5000).prepareDialogueStall(1200, "Until one day you wake up and realize that it's <span class='stall-text'>gone.</span>").delay(900)
-		.showDialogueStall(1200, 2800, 1200, 6000).prepareDialogue(1200, "You never really had it in the first place.").delay(900)
+		.showDialogueStall(1200, 2800, 1200, 7000).prepareDialogue(1200, "You never really had it in the first place.").delay(900)
 		.showDialogue(1200, 5000).prepareDialogue(1200, "Time had you.").delay(900)
-		.showDialogue(1200, 6000).fadeOut(3600, function() {
+		.showDialogue(1200, 5000).fadeOut(3600, function() {
 			startIntroduction2();
 		});
 	}
@@ -65,8 +65,7 @@ $(function() {
 		dialogueExchange1();
 
 		function dialogueExchange1() {
-			p1Text.text("hey");
-			p1Text.delay(1000).showDialogue(800, 3000).prepareDialogue(800, "hey, are you awake?");
+			p1Text.text("hey").delay(3000).showDialogue(800, 3000);
 
 			holders.promise().done(function() {
 				dialogueExchange2();
@@ -74,10 +73,9 @@ $(function() {
 		}
 
 		function dialogueExchange2() {
-			p1Text.delay(900).showDialogue(800, 4000).prepareDialogue(800, "wake up").delay(900);
+			p1Text.prepareDialogue(800, "hey, are you awake?").delay(900).showDialogue(800, 4000).fadeOut(800);
 
-			p2InnerText.text("...");
-			p2InnerText.delay(1200).showDialogue(800, 1500).fadeOut(800);
+			p2InnerText.text("...").delay(2500).showDialogue(800, 1500).fadeOut(800);
 		}
 
 		// p1Text.text("hey");
