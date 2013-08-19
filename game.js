@@ -57,10 +57,12 @@ $(function() {
 		var p1Text = $(".person1-text");
 		var p2Text = $(".person2-text");
 		var p2InnerText = $(".person2inner-text");
+		var answerText = $("#answer-holder");
 		var holders = $('#text-holder');
 		p1Text.hide();
 		p2Text.hide();
 		p2InnerText.hide();
+		answerText.hide();
 
 		dialogueExchange1();
 
@@ -73,9 +75,53 @@ $(function() {
 		}
 
 		function dialogueExchange2() {
-			p1Text.prepareDialogue(800, "hey, are you awake?").delay(900).showDialogue(800, 4000).fadeOut(800);
+			p1Text.prepareDialogue(800, "hey, are you awake?").delay(900).showDialogue(800, 4000);
 
-			p2InnerText.text("...").delay(2500).showDialogue(800, 1500).fadeOut(800);
+			p2InnerText.text("...").delay(2500).showDialogue(800, 2000);
+
+			holders.promise().done(function() {
+				dialogueExchange3();
+			});
+		}
+
+		function dialogueExchange3() {
+			p1Text.prepareDialogue(800, "wake up").delay(900).fadeIn(800);
+
+			p2InnerText.fadeOut(800);
+
+			holders.promise().done(function() {
+				answerChoices1();
+			});
+		}
+
+		function answerChoices1() {
+			var answerChosen = "";
+
+			answerText.html("<span id='answer1' class='choice-text'>Respond</span><span id='answer2' class='choice-text'>Ignore</span>").fadeIn(800);
+
+			$('#answer1').click(function() {
+				answerChosen = $(this).text();
+				dialogueExchange4_a();
+			});
+
+			$('#answer2').click(function() {
+				answerChosen = $(this).text();
+				dialogueExchange4_b();
+			});
+		}
+
+		function dialogueExchange4_a() {
+			p1Text.prepareDialogue(800, "i knew you were awake").delay(900).fadeIn(800);
+
+			p2Text.prepareDialogue(800, "yeah...").delay(2700).fadeIn(800);
+
+			answerText.fadeOut(800);
+		}
+
+		function dialogueExchange4_b() {
+			p1Text.prepareDialogue(800, "i know you're awake").delay(900).fadeIn(800);
+
+			answerText.fadeOut(800);
 		}
 
 		// p1Text.text("hey");
