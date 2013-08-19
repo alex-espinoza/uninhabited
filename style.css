@@ -80,5 +80,7 @@ html {
 	font-family: 'Digital', sans-serif;
 	text-align: center;
 	-webkit-transform: skewY(15deg);
+	-moz-transform: skewY(15deg);
+	-ms-transform: skewY(15deg);
 	text-shadow: 0 0 25px red, 0 0 100px red, 0 0 150px red, 0 0 200px red, 0 0 250px red;
 }
